@@ -1,0 +1,51 @@
+import java.util.List;
+import java.util.Arrays;
+import java.io.IOException;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.io.BufferedReader;
+import java.io.*;
+import java.util.Scanner;
+
+
+public class BackendImplement implements BackendInterface {
+
+    @Override
+    public boolean readDataFromFile(String filePath) {
+	try (Scanner sc = new Scanner(new File(filePath))) {
+	    if (sc.hasNextLine()) {
+		return true;
+	    }
+        } catch (IOException | NumberFormatException e) {
+            e.printStackTrace();
+            return false; // Error occurred during file reading
+        }
+	return false;
+    }
+
+    @Override
+    public List<String> getMinimumDuration(int minDuration) {
+	/**List<String> result = new ArrayList<>();
+        // Iterate over movies with duration above the minimum
+        movieTree.forEach(node -> {
+            if (node.getKey() >= minDuration) {
+                result.add(node.getValue().summary());
+            }
+        });*/
+        return null;
+    }
+
+    @Override
+    public List<String> getSpecifiedDuration(int minDuration, int maxDuration) {
+
+/**	List<String> result = new ArrayList<>();
+        // Iterate over movies with duration in the specified range
+        movieTree.forEach(node -> {
+            int duration = node.getKey();
+            if (duration >= minDuration && duration <= maxDuration) {
+                result.add(node.getValue().summary());
+            }
+        });*/
+        return null;
+    }
+}

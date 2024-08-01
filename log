@@ -1,0 +1,64 @@
+Script started on 2023-10-12 01:07:51+00:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="158" LINES="24"]
+[?2004h]0;gudise@my-cs400-vm-1: ~/p1[01;32mgudise@my-cs400-vm-1[00m:[01;34m~/p1[00m$ git status
+[?2004lOn branch frontend
+Your branch is up to date with 'origin/frontend'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mlog[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+[?2004h]0;gudise@my-cs400-vm-1: ~/p1[01;32mgudise@my-cs400-vm-1[00m:[01;34m~/p1[00m$ git log -1
+[?2004l[?1h=[33mcommit 8a37f6382260702b8d836d3e61dcb67689810c57[m[33m ([m[1;36mHEAD -> [m[1;32mfrontend[m[33m, [m[1;31morigin/frontend[m[33m)[m[m
+Author: RISHIKA <gudise@wisc.edu>[m
+Date:   Thu Oct 12 01:07:32 2023 +0000[m
+[m
+    made some changes ot Makefile[m
+[K[?1l>[?2004h]0;gudise@my-cs400-vm-1: ~/p1[01;32mgudise@my-cs400-vm-1[00m:[01;34m~/p1[00m$ make clean
+[?2004lrm -f *.class
+[?2004h]0;gudise@my-cs400-vm-1: ~/p1[01;32mgudise@my-cs400-vm-1[00m:[01;34m~/p1[00m$ ls
+[?2004lBackendImplementation.java   FrontendImplementation.java                     KeyListInterface.java           SingleMovieInterface.java       log
+BackendInterface.java        FrontendInterface.java                          Makefile                        SortedCollectionInterface.java  movies.csv
+FrontendDeveloperTests.java  IterableMultiKeySortedCollectionInterface.java  SingleMovieImplementation.java  TextUITester.java
+[?2004h]0;gudise@my-cs400-vm-1: ~/p1[01;32mgudise@my-cs400-vm-1[00m:[01;34m~/p1[00m$ make runTests
+[?2004ljavac FrontendInterface.java
+javac BackendInterface.java
+javac FrontendImplementation.java
+javac TextUITester.java
+javac BackendImplementation.java
+javac -cp .:../junit5.jar FrontendDeveloperTests.java
+java -cp .:../junit5.jar org.junit.platform.console.ConsoleLauncher --class-path . --select-class FrontendDeveloperTests
+Data loaded successfully!
+
+
+Thanks for using JUnit! Support its development at https://junit.org/sponsoring
+
+[36m╷[0m
+[36m├─[0m [36mJUnit Jupiter[0m [32m✔[0m
+[36m│  └─[0m [36mFrontendDeveloperTests[0m [32m✔[0m
+[36m│     ├─[0m [34mtestExitApp()[0m [32m✔[0m
+[36m│     ├─[0m [34mtestListMoviesShortestDur()[0m [32m✔[0m
+[36m│     ├─[0m [34mtestStartMainCommandLoop()[0m [32m✔[0m
+[36m│     ├─[0m [34mtestListMoviesBetweenDuration()[0m [32m✔[0m
+[36m│     └─[0m [34mtestSpecifyAndLoadData()[0m [32m✔[0m
+[36m├─[0m [36mJUnit Vintage[0m [32m✔[0m
+[36m└─[0m [36mJUnit Platform Suite[0m [32m✔[0m
+
+Test run finished after 170 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         5 tests found           ]
+[         0 tests skipped         ]
+[         5 tests started         ]
+[         0 tests aborted         ]
+[         5 tests successful      ]
+[         0 tests failed          ]
+
+[?2004h]0;gudise@my-cs400-vm-1: ~/p1[01;32mgudise@my-cs400-vm-1[00m:[01;34m~/p1[00m$ exit
+[?2004lexit
+
+Script done on 2023-10-12 01:08:33+00:00 [COMMAND_EXIT_CODE="0"]
