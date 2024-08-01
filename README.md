@@ -8,4 +8,6 @@ Concepts include:
 * Lambda Expressions
 * JUnit Tests
 * Make Files
-* Verision Control 
+* Verision Control
+
+Once you copy the repo, just use the command make to run the tests! 
